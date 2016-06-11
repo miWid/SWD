@@ -37,14 +37,10 @@ public class Matrix {
     }
 
     public Matrix(double[] values){
-        /*
-        1-0
-        2-1
-        3-3
-        4-6
-        5-10
-        y=(x^2-x) / 2
-         */
+        setValues(values);
+    }
+
+    public void setValues(double[] values) {
         int matrixSize = countRowNumber(values.length);
         data = new double[matrixSize][matrixSize];
         int processedValues = 0;
