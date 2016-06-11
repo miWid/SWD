@@ -56,10 +56,14 @@ public class MainWindowController implements Initializable{
             Stage stage = (Stage) mainNaviButton.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/kryteria.fxml"));
             Scene scene = new Scene(loader.load());
-            stage.setScene(scene);
             CriteriaController controller = loader.<CriteriaController>getController();
-            controller.initData(selectedProviders);
-            controller.setPreviousScene(mainNaviButton.getScene());
+            if(controller.currScene != null)
+                stage.setScene(controller.currScene);
+            else {
+                controller.initData(selectedProviders);
+                controller.setPreviousScene(mainNaviButton.getScene());
+                stage.setScene(scene);
+            }
             stage.show();
 
         }
