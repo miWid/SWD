@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.8" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CriteriaController">
+<SplitPane dividerPositions="0.8" fx:id="krytPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CriteriaController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
@@ -48,15 +48,15 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Slider fx:id="krytS1" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
-                                    <Slider fx:id="krytS2" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <Slider fx:id="krytS3" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                    <Slider fx:id="krytS4" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                    <Slider fx:id="krytS5" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                    <Slider fx:id="krytS6" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                    <Slider fx:id="krytS7" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                                    <Slider fx:id="krytS8" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                                    <Slider fx:id="krytS9" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <Slider fx:id="krytS1" onMouseReleased="#isConsistent" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
+                                    <Slider fx:id="krytS2" onMouseReleased="#isConsistent" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Slider fx:id="krytS3" onMouseReleased="#isConsistent" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Slider fx:id="krytS4" onMouseReleased="#isConsistent" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Slider fx:id="krytS5" onMouseReleased="#isConsistent" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Slider fx:id="krytS6" onMouseReleased="#isConsistent" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Slider fx:id="krytS7" onMouseReleased="#isConsistent" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Slider fx:id="krytS8" onMouseReleased="#isConsistent" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <Slider fx:id="krytS9" onMouseReleased="#isConsistent" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                                     <Label fx:id="kryt1_1" text="Cena" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
@@ -150,7 +150,7 @@
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Slider fx:id="krytS10" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <Slider fx:id="krytS10" onMouseReleased="#isConsistent" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="9" />
                                     <Label fx:id="kryt4_4" text="Szyfrowanie" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
@@ -189,7 +189,7 @@
                               </AnchorPane>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="31.0" prefWidth="339.0">
                                  <children>
-                                    <Label fx:id="kryteria_spojnosc" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="TAK" textFill="#029940" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <Label fx:id="kryteria_spojnosc" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="NIE" textFill="#ea0404" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
