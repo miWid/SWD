@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.8" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainWindowController">
+<SplitPane dividerPositions="0.8" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CriteriaController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
@@ -57,27 +57,27 @@
                                     <Slider fx:id="krytS7" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                     <Slider fx:id="krytS8" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                                     <Slider fx:id="krytS9" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                                    <Label fx:id="kryt1_1" text="kryt1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt1_1" text="Cena" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt2_1" text="kryt2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt2_1" text="Anonimowość" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt1_2" text="kryt1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt1_2" text="Cena" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt1_3" text="kryt1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt1_3" text="Cena" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt1_4" text="kryt1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt1_4" text="Cena" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -85,78 +85,78 @@
                                           <Insets />
                                        </GridPane.margin>
                                     </Label>
-                                    <Label fx:id="kryt2_2" text="kryt2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt2_2" text="Anonimowość" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt2_3" text="kryt2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt2_3" text="Anonimowość" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt2_4" text="kryt2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt2_4" text="Anonimowość" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt3_3" text="kryt3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt3_3" text="Możliwości" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt3_4" text="kryt3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt3_4" text="Możliwości" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt3_1" text="kryt3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt3_1" text="Możliwości" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt4_1" text="kryt4" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt4_1" text="Szyfrowanie" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt5_1" text="kryt5" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt5_1" text="Dostępność" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt3_2" text="kryt3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt3_2" text="Możliwości" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt4_2" text="kryt4" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt4_2" text="Szyfrowanie" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt5_2" text="kryt5" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt5_2" text="Dostępność" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt4_3" text="kryt4" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt4_3" text="Szyfrowanie" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt5_3" text="kryt5" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt5_3" text="Dostępność" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
                                     <Slider fx:id="krytS10" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                                    <Label fx:id="kryt4_4" text="kryt4" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt4_4" text="Szyfrowanie" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="kryt5_4" text="kryt5" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                    <Label fx:id="kryt5_4" text="Dostępność" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -206,7 +206,7 @@
                           <items>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                  <children>
-                                    <Button fx:id="cofnij0" mnemonicParsing="false" prefHeight="43.0" prefWidth="395.0" text="Cofnij" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <Button fx:id="cofnij0" onAction="#goBack" mnemonicParsing="false" prefHeight="43.0" prefWidth="395.0" text="Cofnij" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <font>
                                           <Font size="18.0" />
                                        </font>

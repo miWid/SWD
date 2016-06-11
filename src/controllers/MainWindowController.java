@@ -9,23 +9,23 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TabPane;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.ResourceBundle;
+import java.util.*;
 
 /**
  * Created by Michal on 2016-06-10.
  */
 public class MainWindowController implements Initializable{
+
+    @FXML
+    private ComboBox provider1, provider2, provider3;
+    @FXML
+    private Button mainNaviButton;
 
     private final ObservableList<String> allProviders =
             FXCollections.observableArrayList(
@@ -36,101 +36,30 @@ public class MainWindowController implements Initializable{
                     "Provider 5"
             );
 
-    private final ObservableList<String> allCriteria =
-            FXCollections.observableArrayList(
-                    "Cena",
-                    "Anonimowość",
-                    "Możliwości",
-                    "Szyfrowanie",
-                    "Dostępność"
-            );
+    private List<String> selectedProviders = new ArrayList();
 
-    @FXML
-    private Button categoryAdd1;
-    @FXML
-    private Button categoryAdd2;
-    @FXML
-    private Button categoryRemove1;
-    @FXML
-    private Button categoryRemove2;
-    @FXML
-    private ComboBox provider1;
-    @FXML
-    private ComboBox provider2;
-    @FXML
-    private ComboBox provider3;
-    @FXML
-    private ComboBox category1;
-    @FXML
-    private ComboBox category2;
-    @FXML
-    private ComboBox category3;
-    @FXML
-    private ComboBox category4;
-    @FXML
-    private ComboBox category5;
-    @FXML
-    private Button mainNaviButton;
-
-    @FXML
-    private void handleCategoryAddButton(ActionEvent event){
-        switch (((Button)event.getSource()).getId()) {
-            case "categoryAdd1":
-                category4.setVisible(true);
-                categoryAdd2.setVisible(true);
-                categoryAdd1.setVisible(false);
-                categoryRemove1.setVisible(true);
-                break;
-            case "categoryAdd2":
-                category5.setVisible(true);
-                categoryAdd2.setVisible(false);
-                categoryRemove1.setVisible(false);
-                categoryRemove2.setVisible(true);
-                break;
-            default:
-                break;
-        }
-    }
 
     @FXML
     private void fillProviders(Event event) {
         ((ComboBox)event.getSource()).getItems().setAll(allProviders);
     }
 
-    @FXML
-    private void fillCriteria(Event event) {
-        ((ComboBox)event.getSource()).getItems().setAll(allCriteria);
-    }
-
-    @FXML
-    private void handleCategoryRemove(ActionEvent event) {
-        switch (((Button)event.getSource()).getId()) {
-            case "categoryRemove1":
-                category4.setVisible(false);
-                categoryAdd2.setVisible(false);
-                categoryAdd1.setVisible(true);
-                categoryRemove1.setVisible(false);
-                break;
-            case "categoryRemove2":
-                category5.setVisible(false);
-                categoryAdd2.setVisible(true);
-                categoryRemove2.setVisible(false);
-                categoryRemove1.setVisible(true);
-                break;
-            default:
-                break;
-        }
-    }
 
     @FXML
     private void goToNextScene(ActionEvent event) throws IOException {
 
-        if(checkProviders() && checkCriteria()){
+        if(checkProviders()){
 
-            Stage stage = (Stage) mainNaviButton.getScene().getWindow();;
-            Parent root = FXMLLoader.load(getClass().getResource("../views/warianty.fxml"));
-            Scene scene = new Scene(root);
+            if(selectedProviders.isEmpty())
+                selectedProviders.addAll(Arrays.asList(provider1.getValue().toString(), provider2.getValue().toString(), provider3.getValue().toString()));
+
+            Stage stage = (Stage) mainNaviButton.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/kryteria.fxml"));
+            Scene scene = new Scene(loader.load());
             stage.setScene(scene);
+            CriteriaController controller = loader.<CriteriaController>getController();
+            controller.initData(selectedProviders);
+            controller.setPreviousScene(mainNaviButton.getScene());
             stage.show();
 
         }
@@ -139,7 +68,7 @@ public class MainWindowController implements Initializable{
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Ostrzeżenie");
             alert.setHeaderText("Nie można wykonać żądanej operacji.");
-            alert.setContentText("Upewnij się, że wszystkie parametry zostały odpowiednio dobrane. Pamiętaj, że zarówno dostawcy jak i kryteria nie mogą się powtarzać.");
+            alert.setContentText("Upewnij się, że wszycy dostawcy zostali wybrani oraz nie ma żadnych powtórzeń.");
 
             alert.showAndWait();
 
@@ -160,34 +89,9 @@ public class MainWindowController implements Initializable{
             return false;
     }
 
-    private boolean checkCriteria() {
-
-        if(category1.getValue() == null || category2.getValue() == null || category3.getValue() == null)
-            return false;
-
-        HashSet<String> checker = new HashSet();
-
-        checker.add(category1.getValue().toString());
-        checker.add(category2.getValue().toString());
-        checker.add(category3.getValue().toString());
-
-        if(category4.isVisible() && category4.getValue() != null) {
-            checker.add(category4.getValue().toString());
-            return checker.size() == 4;
-        }
-        if(category5.isVisible()&& category5.getValue() != null) {
-            checker.add(category5.getValue().toString());
-            return checker.size() == 5;
-        }
-
-        return checker.size() == 3;
-
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-
 
 }
