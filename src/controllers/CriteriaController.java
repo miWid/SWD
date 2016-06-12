@@ -36,7 +36,8 @@ public class CriteriaController implements Initializable {
     private Scene prevScene;
     public static Scene currScene;
     private ArrayList<String> selectedProviders = new ArrayList<>();
-    private static double[] values = new double[10];
+    public static Matrix preferencesMatrix = new Matrix();
+    private double[] values = new double[10];
 
     void initData(List<String> providers) {
         setCurrentScene(krytPane.getScene());
@@ -58,6 +59,8 @@ public class CriteriaController implements Initializable {
 
         if(checkIfConsistent()){
 
+            preferencesMatrix.setValues(values);
+
             Stage stage = (Stage) dalej0.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/warianty.fxml"));
             Scene scene = new Scene(loader.load());
@@ -77,7 +80,7 @@ public class CriteriaController implements Initializable {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Ostrzeżenie");
             alert.setHeaderText("Nie można wykonać żądanej operacji.");
-            alert.setContentText("Upewnij się, że wszycy dostawcy zostali wybrani oraz nie ma żadnych powtórzeń.");
+            alert.setContentText("Upewnij się, że wszystkie preferencje zostały odpowiednio dobrane.");
 
             alert.showAndWait();
 
@@ -98,13 +101,8 @@ public class CriteriaController implements Initializable {
         this.currScene = currScene;
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
     @FXML
     private void isConsistent(Event event) {
-
 
         values[0] = krytS1.getValue();
         values[1] = krytS2.getValue();
@@ -128,6 +126,12 @@ public class CriteriaController implements Initializable {
             kryteria_spojnosc.setText("NIE");
             kryteria_spojnosc.setTextFill(Paint.valueOf("#ea0404"));
         }
+
+    }
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
 
     }
 }

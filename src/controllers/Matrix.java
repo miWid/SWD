@@ -37,6 +37,10 @@ public class Matrix {
         return rowNumber + 1;
     }
 
+    public Matrix(){
+
+    }
+
     public Matrix(double[] values){
         setValues(values);
     }

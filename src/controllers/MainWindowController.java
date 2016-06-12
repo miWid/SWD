@@ -77,13 +77,6 @@ public class MainWindowController implements Initializable{
             alert.showAndWait();
 
         }
-//        else{
-//            stage=(Stage) mainNaviButton.getScene().getWindow();
-//            root = FXMLLoader.load(getClass().getResource("../views/main2.fxml"));
-//        }
-
-
-
     }
 
     private boolean checkProviders() {

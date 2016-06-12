@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.9" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainWindowController">
+<SplitPane fx:id="rankPanel" dividerPositions="0.9" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RankingController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
@@ -32,33 +34,79 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <AnchorPane>
-                                 <children>
-                                    <Label fx:id="rank1" alignment="CENTER" prefHeight="110.0" prefWidth="796.0" style="-fx-background-color: gold;" text="Wariant1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                                       <font>
-                                          <Font size="36.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane GridPane.rowIndex="1">
-                                 <children>
-                                    <Label fx:id="rank2" alignment="CENTER" prefHeight="109.0" prefWidth="796.0" style="-fx-background-color: silver;" text="Wariant2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" GridPane.rowIndex="1">
-                                       <font>
-                                          <Font size="36.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane GridPane.rowIndex="2">
-                                 <children>
-                                    <Label fx:id="rank3" alignment="CENTER" prefHeight="109.0" prefWidth="796.0" style="-fx-background-color: chocolate;" text="Wariant 3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" GridPane.rowIndex="2">
-                                       <font>
-                                          <Font size="36.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </AnchorPane>
+                              <SplitPane dividerPositions="0.18">
+                                 <items>
+                                    <AnchorPane>
+                                       <children>
+                                          <ImageView fx:id="rank1_img" fitHeight="150.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/gold.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="rank1" alignment="CENTER" prefHeight="110.0" prefWidth="796.0" style="-fx-background-color: gold;" text="Wariant1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                             <effect>
+                                                <Lighting diffuseConstant="1.61" specularConstant="1.26" specularExponent="40.0" surfaceScale="10.0">
+                                                   <bumpInput>
+                                                      <Shadow blurType="TWO_PASS_BOX" height="44.72" radius="23.34" width="50.64" />
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                              <SplitPane dividerPositions="0.18" GridPane.rowIndex="1">
+                                 <items>
+                                    <AnchorPane>
+                                       <children>
+                                          <ImageView fx:id="rank2_img" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/silver.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="rank2" alignment="CENTER" prefHeight="110.0" prefWidth="796.0" style="-fx-background-color: silver;" text="Wariant2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                              <SplitPane dividerPositions="0.18" GridPane.rowIndex="2">
+                                 <items>
+                                    <AnchorPane>
+                                       <children>
+                                          <ImageView fx:id="rank3_img" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/bronze.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="rank3" alignment="CENTER" prefHeight="110.0" prefWidth="796.0" style="-fx-background-color: chocolate;" text="Wariant3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
                            </children>
                         </GridPane>
                      </children>
@@ -80,7 +128,7 @@
                <children>
                   <AnchorPane>
                      <children>
-                        <Button fx:id="cofnijLast" mnemonicParsing="false" prefHeight="57.0" prefWidth="266.0" text="Cofnij" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Button fx:id="cofnijLast" mnemonicParsing="false" onAction="#goBack" prefHeight="57.0" prefWidth="266.0" text="Cofnij" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <font>
                               <Font size="20.0" />
                            </font>
