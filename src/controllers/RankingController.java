@@ -1,8 +1,11 @@
 package controllers;
 
+import app.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -38,10 +41,25 @@ public class RankingController implements Initializable {
     @FXML
     private void goBack(ActionEvent event) throws IOException {
 
-        Stage stage = (Stage) cofnijLast.getScene().getWindow();
+        Stage stage = (Stage) rankPanel.getScene().getWindow();
         stage.setScene(prevScene);
         stage.show();
 
+    }
+
+    @FXML
+    private void close(ActionEvent event) throws IOException {
+
+        Stage stage = (Stage) rankPanel.getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
+    private void goToStart(ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("../views/main2.fxml"));
+        stage.setScene(new Scene(root, 800, 600));
+        stage.show();
     }
 
     public void setPreviousScene(Scene prevScene) {
@@ -52,4 +70,6 @@ public class RankingController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
+
+
 }

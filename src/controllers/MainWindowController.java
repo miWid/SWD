@@ -28,13 +28,7 @@ public class MainWindowController implements Initializable{
     private Button mainNaviButton;
 
     private final ObservableList<String> allProviders =
-            FXCollections.observableArrayList(
-                    "Provider 1",
-                    "Provider 2",
-                    "Provider 3",
-                    "Provider 4",
-                    "Provider 5"
-            );
+            FXCollections.observableArrayList(DataLoader.loadNames());
 
     private List<String> selectedProviders = new ArrayList();
 

@@ -33,7 +33,7 @@ public class CriteriaController implements Initializable {
     @FXML
     private SplitPane krytPane;
 
-    private Scene prevScene;
+    public static Scene prevScene;
     public static Scene currScene;
     private ArrayList<String> selectedProviders = new ArrayList<>();
     public static Matrix preferencesMatrix = new Matrix();
@@ -60,6 +60,16 @@ public class CriteriaController implements Initializable {
         if(checkIfConsistent()){
 
             preferencesMatrix.setValues(values);
+
+//            for(double d : values){
+//                System.out.println(d);
+//            }
+//
+//            double[] check = preferencesMatrix.getPreferencesVector();
+//            System.out.println("Preferences");
+//            for(double d : check){
+//                System.out.println(d);
+//            }
 
             Stage stage = (Stage) dalej0.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/warianty.fxml"));
@@ -97,6 +107,8 @@ public class CriteriaController implements Initializable {
         this.prevScene = prevScene;
     }
 
+    public static void deletePreviousScene(){prevScene = null; }
+
     public void setCurrentScene(Scene currScene){
         this.currScene = currScene;
     }
@@ -128,7 +140,6 @@ public class CriteriaController implements Initializable {
         }
 
     }
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

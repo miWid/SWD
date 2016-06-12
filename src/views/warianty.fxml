@@ -19,7 +19,7 @@
                                  <content>
                                     <GridPane prefHeight="1016.0" prefWidth="791.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                       <columnConstraints>
-                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                       </columnConstraints>
                                       <rowConstraints>
                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -47,44 +47,44 @@
                                                                <children>
                                                                   <GridPane prefHeight="135.0" prefWidth="789.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <children>
-                                                                        <Slider fx:id="cena3_1" onMouseReleased="#isConsistentCena" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
+                                                                        <Slider fx:id="cena3_1" onMouseReleased="#isConsistentCena" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
                                                                         <Label fx:id="cena_provider1_3" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="cena_provider2_3" alignment="CENTER" text="Provider2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
-                                                                        <Slider fx:id="cena3_2" onMouseReleased="#isConsistentCena" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                                        <Slider fx:id="cena3_3" onMouseReleased="#isConsistentCena" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Slider fx:id="cena3_2" onMouseReleased="#isConsistentCena" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Slider fx:id="cena3_3" onMouseReleased="#isConsistentCena" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                                         <Label fx:id="cena_provider1_4" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="cena_provider2_4" alignment="CENTER" text="Provider2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="cena_provider3_3" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="cena_provider3_4" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                      </children>
                                                                      <columnConstraints>
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="118.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.0" minWidth="10.0" prefWidth="408.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                                                      </columnConstraints>
                                                                      <rowConstraints>
                                                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -113,7 +113,7 @@
                                                             </AnchorPane>
                                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="31.0" prefWidth="339.0">
                                                                <children>
-                                                                  <Label fx:id="cena_spojnosc3" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="NIE" textFill="#ea0404" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                  <Label fx:id="cena_spojnosc3" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="TAK" textFill="#029940" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <font>
                                                                         <Font size="18.0" />
                                                                      </font>
@@ -145,44 +145,44 @@
                                                                <children>
                                                                   <GridPane prefHeight="135.0" prefWidth="789.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <children>
-                                                                        <Slider fx:id="cena4_1" onMouseReleased="#isConsistentCena" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
+                                                                        <Slider fx:id="cena4_1" onMouseReleased="#isConsistentCena" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
                                                                         <Label fx:id="cena_provider1_5" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="cena_provider2_5" alignment="CENTER" text="Provider2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
-                                                                        <Slider fx:id="cena4_2" onMouseReleased="#isConsistentCena" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                                        <Slider fx:id="cena4_3" onMouseReleased="#isConsistentCena" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Slider fx:id="cena4_2" onMouseReleased="#isConsistentCena" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Slider fx:id="cena4_3" onMouseReleased="#isConsistentCena" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                                         <Label fx:id="cena_provider1_6" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="cena_provider2_6" alignment="CENTER" text="Provider2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="cena_provider3_5" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="cena_provider3_6" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                      </children>
                                                                      <columnConstraints>
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="118.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.0" minWidth="10.0" prefWidth="408.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                                                      </columnConstraints>
                                                                      <rowConstraints>
                                                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -211,7 +211,7 @@
                                                             </AnchorPane>
                                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="31.0" prefWidth="339.0">
                                                                <children>
-                                                                  <Label fx:id="cena_spojnosc4" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="NIE" textFill="#ea0404" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                  <Label fx:id="cena_spojnosc4" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="TAK" textFill="#029940" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <font>
                                                                         <Font size="18.0" />
                                                                      </font>
@@ -243,44 +243,44 @@
                                                                <children>
                                                                   <GridPane prefHeight="135.0" prefWidth="789.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <children>
-                                                                        <Slider fx:id="cena5_1" onMouseReleased="#isConsistentCena" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
+                                                                        <Slider fx:id="cena5_1" onMouseReleased="#isConsistentCena" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
                                                                         <Label fx:id="cena_provider1_7" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="cena_provider2_7" alignment="CENTER" text="Provider2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
-                                                                        <Slider fx:id="cena5_2" onMouseReleased="#isConsistentCena" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                                        <Slider fx:id="cena5_3" onMouseReleased="#isConsistentCena" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Slider fx:id="cena5_2" onMouseReleased="#isConsistentCena" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Slider fx:id="cena5_3" onMouseReleased="#isConsistentCena" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                                         <Label fx:id="cena_provider1_8" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="cena_provider2_8" alignment="CENTER" text="Provider2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="cena_provider3_7" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="cena_provider3_8" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                      </children>
                                                                      <columnConstraints>
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="118.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.0" minWidth="10.0" prefWidth="408.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                                                      </columnConstraints>
                                                                      <rowConstraints>
                                                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -309,7 +309,7 @@
                                                             </AnchorPane>
                                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="31.0" prefWidth="339.0">
                                                                <children>
-                                                                  <Label fx:id="cena_spojnosc5" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="NIE" textFill="#ea0404" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                  <Label fx:id="cena_spojnosc5" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="TAK" textFill="#029940" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <font>
                                                                         <Font size="18.0" />
                                                                      </font>
@@ -341,7 +341,7 @@
                                                                <children>
                                                                   <GridPane prefHeight="135.0" prefWidth="789.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <children>
-                                                                        <Slider fx:id="cena1_1" onMouseReleased="#isConsistentCena" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
+                                                                        <Slider fx:id="cena1_1" onMouseReleased="#isConsistentCena" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
                                                                         <Label alignment="CENTER" text="Miesięczny koszt" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
                                                                               <Font size="16.0" />
@@ -352,8 +352,8 @@
                                                                               <Font size="16.0" />
                                                                            </font>
                                                                         </Label>
-                                                                        <Slider fx:id="cena1_2" onMouseReleased="#isConsistentCena" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                                        <Slider fx:id="cena1_3" onMouseReleased="#isConsistentCena" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Slider fx:id="cena1_2" onMouseReleased="#isConsistentCena" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Slider fx:id="cena1_3" onMouseReleased="#isConsistentCena" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                                         <Label alignment="CENTER" text="Miesięczny koszt" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
                                                                               <Font size="16.0" />
@@ -376,9 +376,9 @@
                                                                         </Label>
                                                                      </children>
                                                                      <columnConstraints>
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="118.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.0" minWidth="10.0" prefWidth="408.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                                                      </columnConstraints>
                                                                      <rowConstraints>
                                                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -407,7 +407,7 @@
                                                             </AnchorPane>
                                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="31.0" prefWidth="339.0">
                                                                <children>
-                                                                  <Label fx:id="cena_spojnosc1" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="NIE" textFill="#ea0404" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                  <Label fx:id="cena_spojnosc1" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="TAK" textFill="#029940" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <font>
                                                                         <Font size="18.0" />
                                                                      </font>
@@ -470,7 +470,7 @@
                                  <content>
                                     <GridPane prefHeight="1018.0" prefWidth="791.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                       <columnConstraints>
-                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                       </columnConstraints>
                                       <rowConstraints>
                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -498,7 +498,7 @@
                                                                <children>
                                                                   <GridPane prefHeight="135.0" prefWidth="789.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <children>
-                                                                        <Slider fx:id="anon1_1" onMouseReleased="#isConsistentAnon" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
+                                                                        <Slider fx:id="anon1_1" onMouseReleased="#isConsistentAnon" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
                                                                         <Label alignment="CENTER" text="Przechowywanie informacji " GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
                                                                               <Font size="16.0" />
@@ -509,8 +509,8 @@
                                                                               <Font size="16.0" />
                                                                            </font>
                                                                         </Label>
-                                                                        <Slider fx:id="anon1_2" onMouseReleased="#isConsistentAnon" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                                        <Slider fx:id="anon1_3" onMouseReleased="#isConsistentAnon" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Slider fx:id="anon1_2" onMouseReleased="#isConsistentAnon" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Slider fx:id="anon1_3" onMouseReleased="#isConsistentAnon" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                                         <Label alignment="CENTER" text="Przechowywanie informacji " GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
                                                                               <Font size="16.0" />
@@ -533,9 +533,9 @@
                                                                         </Label>
                                                                      </children>
                                                                      <columnConstraints>
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="118.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.0" minWidth="10.0" prefWidth="408.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                                                      </columnConstraints>
                                                                      <rowConstraints>
                                                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -564,7 +564,7 @@
                                                             </AnchorPane>
                                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="31.0" prefWidth="339.0">
                                                                <children>
-                                                                  <Label fx:id="anon_spojnosc1" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="NIE" textFill="#ea0404" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                  <Label fx:id="anon_spojnosc1" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="TAK" textFill="#029940" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <font>
                                                                         <Font size="18.0" />
                                                                      </font>
@@ -596,44 +596,44 @@
                                                                <children>
                                                                   <GridPane prefHeight="135.0" prefWidth="789.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <children>
-                                                                        <Slider fx:id="anon3_1" onMouseReleased="#isConsistentAnon" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
+                                                                        <Slider fx:id="anon3_1" onMouseReleased="#isConsistentAnon" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
                                                                         <Label fx:id="anon_provider1_3" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="anon_provider2_3" alignment="CENTER" text="Provider2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
-                                                                        <Slider fx:id="anon3_2" onMouseReleased="#isConsistentAnon" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                                        <Slider fx:id="anon3_3" onMouseReleased="#isConsistentAnon" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Slider fx:id="anon3_2" onMouseReleased="#isConsistentAnon" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Slider fx:id="anon3_3" onMouseReleased="#isConsistentAnon" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                                         <Label fx:id="anon_provider1_4" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="anon_provider2_4" alignment="CENTER" text="Provider2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="anon_provider3_3" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="anon_provider3_4" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                      </children>
                                                                      <columnConstraints>
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="118.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.0" minWidth="10.0" prefWidth="408.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                                                      </columnConstraints>
                                                                      <rowConstraints>
                                                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -662,7 +662,7 @@
                                                             </AnchorPane>
                                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="31.0" prefWidth="339.0">
                                                                <children>
-                                                                  <Label fx:id="anon_spojnosc3" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="NIE" textFill="#ea0404" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                  <Label fx:id="anon_spojnosc3" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="TAK" textFill="#029940" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <font>
                                                                         <Font size="18.0" />
                                                                      </font>
@@ -694,44 +694,44 @@
                                                                <children>
                                                                   <GridPane prefHeight="135.0" prefWidth="789.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <children>
-                                                                        <Slider fx:id="anon4_1" onMouseReleased="#isConsistentAnon" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
+                                                                        <Slider fx:id="anon4_1" onMouseReleased="#isConsistentAnon" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
                                                                         <Label fx:id="anon_provider1_5" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="anon_provider2_5" alignment="CENTER" text="Provider2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
-                                                                        <Slider fx:id="anon4_2" onMouseReleased="#isConsistentAnon" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                                        <Slider fx:id="anon4_3" onMouseReleased="#isConsistentAnon" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Slider fx:id="anon4_2" onMouseReleased="#isConsistentAnon" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Slider fx:id="anon4_3" onMouseReleased="#isConsistentAnon" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                                         <Label fx:id="anon_provider1_6" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="anon_provider2_6" alignment="CENTER" text="Provider2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="anon_provider3_5" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="anon_provider3_6" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                      </children>
                                                                      <columnConstraints>
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="118.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.0" minWidth="10.0" prefWidth="408.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                                                      </columnConstraints>
                                                                      <rowConstraints>
                                                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -760,7 +760,7 @@
                                                             </AnchorPane>
                                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="31.0" prefWidth="339.0">
                                                                <children>
-                                                                  <Label fx:id="anon_spojnosc4" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="NIE" textFill="#ea0404" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                  <Label fx:id="anon_spojnosc4" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="TAK" textFill="#029940" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <font>
                                                                         <Font size="18.0" />
                                                                      </font>
@@ -792,44 +792,44 @@
                                                                <children>
                                                                   <GridPane prefHeight="135.0" prefWidth="789.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <children>
-                                                                        <Slider fx:id="anon5_1" onMouseReleased="#isConsistentAnon" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
+                                                                        <Slider fx:id="anon5_1" onMouseReleased="#isConsistentAnon" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
                                                                         <Label fx:id="anon_provider1_7" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="anon_provider2_7" alignment="CENTER" text="Provider2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
-                                                                        <Slider fx:id="anon5_2" onMouseReleased="#isConsistentAnon" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                                        <Slider fx:id="anon5_3" onMouseReleased="#isConsistentAnon" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Slider fx:id="anon5_2" onMouseReleased="#isConsistentAnon" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Slider fx:id="anon5_3" onMouseReleased="#isConsistentAnon" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                                         <Label fx:id="anon_provider1_8" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="anon_provider2_8" alignment="CENTER" text="Provider2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="anon_provider3_7" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="anon_provider3_8" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                      </children>
                                                                      <columnConstraints>
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="118.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.0" minWidth="10.0" prefWidth="408.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                                                      </columnConstraints>
                                                                      <rowConstraints>
                                                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -858,7 +858,7 @@
                                                             </AnchorPane>
                                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="31.0" prefWidth="339.0">
                                                                <children>
-                                                                  <Label fx:id="anon_spojnosc5" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="NIE" textFill="#ea0404" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                  <Label fx:id="anon_spojnosc5" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="TAK" textFill="#029940" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <font>
                                                                         <Font size="18.0" />
                                                                      </font>
@@ -921,7 +921,7 @@
                                  <content>
                                     <GridPane prefHeight="764.0" prefWidth="791.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                       <columnConstraints>
-                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                       </columnConstraints>
                                       <rowConstraints>
                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -944,7 +944,7 @@
                                                    <children>
                                                       <GridPane prefHeight="135.0" prefWidth="789.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <children>
-                                                            <Slider fx:id="moz1_1" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
+                                                            <Slider fx:id="moz1_1" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
                                                             <Label alignment="CENTER" text="Implementowane protokoły" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                <font>
                                                                   <Font size="16.0" />
@@ -957,9 +957,9 @@
                                                             </Label>
                                                          </children>
                                                          <columnConstraints>
-                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="118.0" />
-                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.0" minWidth="10.0" prefWidth="408.0" />
-                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                                          </columnConstraints>
                                                          <rowConstraints>
                                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -988,44 +988,44 @@
                                                                <children>
                                                                   <GridPane prefHeight="135.0" prefWidth="789.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <children>
-                                                                        <Slider fx:id="moz3_1" onMouseReleased="#isConsistentMoz" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
+                                                                        <Slider fx:id="moz3_1" onMouseReleased="#isConsistentMoz" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
                                                                         <Label fx:id="moz_provider1_3" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="moz_provider2_3" alignment="CENTER" text="Provider2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
-                                                                        <Slider fx:id="moz3_2" onMouseReleased="#isConsistentMoz" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                                        <Slider fx:id="moz3_3" onMouseReleased="#isConsistentMoz" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Slider fx:id="moz3_2" onMouseReleased="#isConsistentMoz" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Slider fx:id="moz3_3" onMouseReleased="#isConsistentMoz" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                                         <Label fx:id="moz_provider1_4" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="moz_provider2_4" alignment="CENTER" text="Provider2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="moz_provider3_3" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="moz_provider3_4" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                      </children>
                                                                      <columnConstraints>
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="118.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.0" minWidth="10.0" prefWidth="408.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                                                      </columnConstraints>
                                                                      <rowConstraints>
                                                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -1054,7 +1054,7 @@
                                                             </AnchorPane>
                                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="31.0" prefWidth="339.0">
                                                                <children>
-                                                                  <Label fx:id="moz_spojnosc2" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="NIE" textFill="#ea0404" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                  <Label fx:id="moz_spojnosc2" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="TAK" textFill="#029940" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <font>
                                                                         <Font size="18.0" />
                                                                      </font>
@@ -1086,44 +1086,44 @@
                                                                <children>
                                                                   <GridPane prefHeight="135.0" prefWidth="789.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <children>
-                                                                        <Slider fx:id="moz4_1" onMouseReleased="#isConsistentMoz" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
+                                                                        <Slider fx:id="moz4_1" onMouseReleased="#isConsistentMoz" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
                                                                         <Label fx:id="moz_provider1_5" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="moz_provider2_5" alignment="CENTER" text="Provider2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
-                                                                        <Slider fx:id="moz4_2" onMouseReleased="#isConsistentMoz" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                                        <Slider fx:id="moz4_3" onMouseReleased="#isConsistentMoz" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Slider fx:id="moz4_2" onMouseReleased="#isConsistentMoz" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Slider fx:id="moz4_3" onMouseReleased="#isConsistentMoz" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                                         <Label fx:id="moz_provider1_6" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="moz_provider2_6" alignment="CENTER" text="Provider2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="moz_provider3_5" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                         <Label fx:id="moz_provider3_6" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                            <font>
-                                                                              <Font size="20.0" />
+                                                                              <Font size="18.0" />
                                                                            </font>
                                                                         </Label>
                                                                      </children>
                                                                      <columnConstraints>
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="118.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.0" minWidth="10.0" prefWidth="408.0" />
-                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                                                      </columnConstraints>
                                                                      <rowConstraints>
                                                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -1152,7 +1152,7 @@
                                                             </AnchorPane>
                                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="31.0" prefWidth="339.0">
                                                                <children>
-                                                                  <Label fx:id="moz_spojnosc3" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="NIE" textFill="#ea0404" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                  <Label fx:id="moz_spojnosc3" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="TAK" textFill="#029940" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                                      <font>
                                                                         <Font size="18.0" />
                                                                      </font>
@@ -1230,44 +1230,44 @@
                                                    <children>
                                                       <GridPane prefHeight="135.0" prefWidth="789.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <children>
-                                                            <Slider fx:id="szyf1_1" onMouseReleased="#isConsistentSzyf" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
+                                                            <Slider fx:id="szyf1_1" onMouseReleased="#isConsistentSzyf" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
                                                             <Label fx:id="szyf_provider1_1" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font size="18.0" />
                                                                </font>
                                                             </Label>
                                                             <Label fx:id="szyf_provider2_1" alignment="CENTER" text="Provider2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font size="18.0" />
                                                                </font>
                                                             </Label>
-                                                            <Slider fx:id="szyf1_2" onMouseReleased="#isConsistentSzyf" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                            <Slider fx:id="szyf1_3" onMouseReleased="#isConsistentSzyf" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                            <Slider fx:id="szyf1_2" onMouseReleased="#isConsistentSzyf" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <Slider fx:id="szyf1_3" onMouseReleased="#isConsistentSzyf" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                             <Label fx:id="szyf_provider1_2" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font size="18.0" />
                                                                </font>
                                                             </Label>
                                                             <Label fx:id="szyf_provider2_2" alignment="CENTER" text="Provider2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font size="18.0" />
                                                                </font>
                                                             </Label>
                                                             <Label fx:id="szyf_provider3_1" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font size="18.0" />
                                                                </font>
                                                             </Label>
                                                             <Label fx:id="szyf_provider3_2" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font size="18.0" />
                                                                </font>
                                                             </Label>
                                                          </children>
                                                          <columnConstraints>
-                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="118.0" />
-                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.0" minWidth="10.0" prefWidth="408.0" />
-                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                                          </columnConstraints>
                                                          <rowConstraints>
                                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -1296,7 +1296,7 @@
                                                 </AnchorPane>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="31.0" prefWidth="339.0">
                                                    <children>
-                                                      <Label fx:id="szyf_spojnosc1" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="NIE" textFill="#ea0404" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <Label fx:id="szyf_spojnosc1" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="TAK" textFill="#029940" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <font>
                                                             <Font size="18.0" />
                                                          </font>
@@ -1370,44 +1370,44 @@
                                                    <children>
                                                       <GridPane prefHeight="135.0" prefWidth="789.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <children>
-                                                            <Slider fx:id="dost1_1" onMouseReleased="#isConsistentDost" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
+                                                            <Slider fx:id="dost1_1" onMouseReleased="#isConsistentDost" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
                                                             <Label fx:id="dost_provider1_1" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font size="18.0" />
                                                                </font>
                                                             </Label>
                                                             <Label fx:id="dost_provider2_1" alignment="CENTER" text="Provider2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font size="18.0" />
                                                                </font>
                                                             </Label>
-                                                            <Slider fx:id="dost1_2" onMouseReleased="#isConsistentDost" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                            <Slider fx:id="dost1_3" onMouseReleased="#isConsistentDost" blockIncrement="1.0" majorTickUnit="3.0" max="9.0" min="-9.0" minorTickCount="2" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                            <Slider fx:id="dost1_2" onMouseReleased="#isConsistentDost" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <Slider fx:id="dost1_3" onMouseReleased="#isConsistentDost" blockIncrement="10.0" majorTickUnit="2.0" max="9.0" min="-9.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                             <Label fx:id="dost_provider1_2" alignment="CENTER" text="Provider1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font size="18.0" />
                                                                </font>
                                                             </Label>
                                                             <Label fx:id="dost_provider2_2" alignment="CENTER" text="Provider2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font size="18.0" />
                                                                </font>
                                                             </Label>
                                                             <Label fx:id="dost_provider3_1" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font size="18.0" />
                                                                </font>
                                                             </Label>
                                                             <Label fx:id="dost_provider3_2" alignment="CENTER" text="Provider3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font size="18.0" />
                                                                </font>
                                                             </Label>
                                                          </children>
                                                          <columnConstraints>
-                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="118.0" />
-                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="408.0" minWidth="10.0" prefWidth="408.0" />
-                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
                                                          </columnConstraints>
                                                          <rowConstraints>
                                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -1436,7 +1436,7 @@
                                                 </AnchorPane>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="31.0" prefWidth="339.0">
                                                    <children>
-                                                      <Label fx:id="dost_spojnosc1" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="NIE" textFill="#ea0404" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <Label fx:id="dost_spojnosc1" alignment="CENTER" prefHeight="31.0" prefWidth="76.0" text="TAK" textFill="#029940" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <font>
                                                             <Font size="18.0" />
                                                          </font>

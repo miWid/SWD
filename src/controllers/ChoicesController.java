@@ -12,33 +12,33 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 /**
  * Created by Michal on 2016-06-11.
  */
 public class ChoicesController implements Initializable {
 
-    private Scene prevScene;
+    private static Scene prevScene;
     public static Scene currScene;
     private ArrayList<String> selectedProviders = new ArrayList<>();
-    private List<String> finalRanking;
+    private List<String> finalRanking = new ArrayList<>();
 
-    public static Matrix cenaPreferences1 = new Matrix();
-    public static Matrix cenaPreferences2 = new Matrix();
-    public static Matrix cenaPreferences3 = new Matrix();
-    public static Matrix cenaPreferences4 = new Matrix();
-    public static Matrix anonPreferences1 = new Matrix();
-    public static Matrix anonPreferences2 = new Matrix();
-    public static Matrix anonPreferences3 = new Matrix();
-    public static Matrix anonPreferences4 = new Matrix();
-    public static Matrix mozPreferences1 = new Matrix();
-    public static Matrix mozPreferences2 = new Matrix();
-    public static Matrix mozPreferences3 = new Matrix();
-    public static Matrix szyfPreferences1 = new Matrix();
-    public static Matrix dostPreferences1 = new Matrix();
+    private static double[] initValues = {0,0,0};
+
+    public static Matrix cenaPreferences1 = new Matrix(initValues);
+    public static Matrix cenaPreferences2 = new Matrix(initValues);
+    public static Matrix cenaPreferences3 = new Matrix(initValues);
+    public static Matrix cenaPreferences4 = new Matrix(initValues);
+    public static Matrix anonPreferences1 = new Matrix(initValues);
+    public static Matrix anonPreferences2 = new Matrix(initValues);
+    public static Matrix anonPreferences3 = new Matrix(initValues);
+    public static Matrix anonPreferences4 = new Matrix(initValues);
+    public static Matrix mozPreferences1 = new Matrix(initValues);
+    public static Matrix mozPreferences2 = new Matrix(initValues);
+    public static Matrix mozPreferences3 = new Matrix(initValues);
+    public static Matrix szyfPreferences1 = new Matrix(initValues);
+    public static Matrix dostPreferences1 = new Matrix(initValues);
 
 
 
@@ -71,7 +71,7 @@ public class ChoicesController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/ranking.fxml"));
             Scene scene = new Scene(loader.load());
             RankingController controller = loader.<RankingController>getController();
-            controller.initData(finalRanking);
+       //     controller.initData(finalRanking);
             controller.setPreviousScene(dalej1.getScene());
             stage.setScene(scene);
             stage.show();
@@ -122,8 +122,18 @@ public class ChoicesController implements Initializable {
         ahp.addFinalPreferences(3,szyfPreferencesVector1);
         ahp.addFinalPreferences(4,dostPreferencesVector1);
 
-        int bestChoice = ahp.getBestDecisionIndex();
-        finalRanking.add(selectedProviders.get(bestChoice));
+        double[] ratings = ahp.getRatings();
+
+        HashMap<String,Double> results = new HashMap<>();
+        results.put(selectedProviders.get(0), ratings[0]);
+        results.put(selectedProviders.get(1), ratings[1]);
+        results.put(selectedProviders.get(2), ratings[2]);
+
+        System.out.println("Ranking:");
+        for(Double d: ratings)
+            System.out.println(d);
+
+       // finalRanking.add(selectedProviders.get(bestChoice));
 
     }
 
@@ -258,7 +268,7 @@ public class ChoicesController implements Initializable {
         Matrix matrix = new Matrix(values);
         matrix.normalize();
 
-        if(matrix.isConsistent()){
+        if( matrix.isConsistent()){
             consistency.setText("TAK");
             consistency.setTextFill(Paint.valueOf("#029940"));
         }
@@ -350,6 +360,8 @@ public class ChoicesController implements Initializable {
     public void setPreviousScene(Scene prevScene) {
         this.prevScene = prevScene;
     }
+
+    public static void deletePreviousScene(){prevScene = null; }
 
     public void setCurrentScene(Scene currScene) {
         this.currScene = currScene;
