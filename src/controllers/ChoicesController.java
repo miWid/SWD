@@ -111,14 +111,14 @@ public class ChoicesController implements Initializable {
         ahp.addSubcriteriaPreferences(0,cenaPreferencesVector1);
         ahp.addSubcriteriaPreferences(1,anonPreferencesVector1);
         ahp.addSubcriteriaPreferences(2,mozPreferencesVector1);
-        ahp.addFinalPreferences(0,1,cenaPreferencesVector2);
-        ahp.addFinalPreferences(0,2,cenaPreferencesVector3);
-        ahp.addFinalPreferences(0,3,cenaPreferencesVector4);
-        ahp.addFinalPreferences(1,1,anonPreferencesVector2);
-        ahp.addFinalPreferences(1,2,anonPreferencesVector3);
-        ahp.addFinalPreferences(1,3,anonPreferencesVector4);
-        ahp.addFinalPreferences(2,1,mozPreferencesVector2);
-        ahp.addFinalPreferences(2,2,mozPreferencesVector3);
+        ahp.addFinalPreferences(0,0,cenaPreferencesVector2);
+        ahp.addFinalPreferences(0,1,cenaPreferencesVector3);
+        ahp.addFinalPreferences(0,2,cenaPreferencesVector4);
+        ahp.addFinalPreferences(1,0,anonPreferencesVector2);
+        ahp.addFinalPreferences(1,1,anonPreferencesVector3);
+        ahp.addFinalPreferences(1,2,anonPreferencesVector4);
+        ahp.addFinalPreferences(2,0,mozPreferencesVector2);
+        ahp.addFinalPreferences(2,1,mozPreferencesVector3);
         ahp.addFinalPreferences(3,szyfPreferencesVector1);
         ahp.addFinalPreferences(4,dostPreferencesVector1);
 

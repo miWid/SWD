@@ -52,7 +52,15 @@ public class Matrix {
         int processedValues = 0;
         for(int rowIndex = 0; rowIndex < data.length - 1; rowIndex++) {
             for(int columnIndex = rowIndex + 1; columnIndex < data.length; columnIndex++) {
-                data[rowIndex][columnIndex] = values[processedValues++];
+                if(values[processedValues] == 0)
+                {
+                    data[rowIndex][columnIndex] = 1;
+                    processedValues++;
+                }
+                else {
+                    data[rowIndex][columnIndex] = values[processedValues] > 0 ? values[processedValues++] : 1 / values[processedValues++];
+                }
+
             }
         }
 
