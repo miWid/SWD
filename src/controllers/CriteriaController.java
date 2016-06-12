@@ -35,13 +35,11 @@ public class CriteriaController implements Initializable {
 
     public static Scene prevScene;
     public static Scene currScene;
-    private ArrayList<String> selectedProviders = new ArrayList<>();
     public static Matrix preferencesMatrix = new Matrix();
     private double[] values = new double[10];
 
-    void initData(List<String> providers) {
+    void initData() {
         setCurrentScene(krytPane.getScene());
-        this.selectedProviders.addAll(providers);
     }
 
 
@@ -60,6 +58,7 @@ public class CriteriaController implements Initializable {
         if(checkIfConsistent()){
 
             preferencesMatrix.setValues(values);
+            preferencesMatrix.normalize();
 
 //            for(double d : values){
 //                System.out.println(d);
@@ -75,15 +74,15 @@ public class CriteriaController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/warianty.fxml"));
             Scene scene = new Scene(loader.load());
             ChoicesController controller = loader.<ChoicesController>getController();
+
             if(controller.currScene != null)
                 stage.setScene(controller.currScene);
             else {
-                controller.initData(selectedProviders);
+                controller.initData();
                 controller.setPreviousScene(dalej0.getScene());
                 stage.setScene(scene);
             }
             stage.show();
-
         }
         else{
 

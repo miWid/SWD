@@ -21,7 +21,7 @@ public class ChoicesController implements Initializable {
 
     private static Scene prevScene;
     public static Scene currScene;
-    private ArrayList<String> selectedProviders = new ArrayList<>();
+    private ArrayList<String> selectedProviders;
     private List<String> finalRanking = new ArrayList<>();
 
     private static double[] initValues = {0,0,0};
@@ -42,9 +42,8 @@ public class ChoicesController implements Initializable {
 
 
 
-    void initData(List<String> providers) {
+    void initData() {
         setCurrentScene(tabPanel.getScene());
-        this.selectedProviders.addAll(providers);
         fillProviders();
     }
 
@@ -71,7 +70,7 @@ public class ChoicesController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/ranking.fxml"));
             Scene scene = new Scene(loader.load());
             RankingController controller = loader.<RankingController>getController();
-       //     controller.initData(finalRanking);
+            controller.initData(finalRanking);
             controller.setPreviousScene(dalej1.getScene());
             stage.setScene(scene);
             stage.show();
@@ -90,6 +89,8 @@ public class ChoicesController implements Initializable {
     }
 
     private void countFinalRanking() {
+        
+        normalizePreferencesMatrices();
 
         double[] criteriaPreferencesVector = CriteriaController.preferencesMatrix.getPreferencesVector(); //ogolne porownanie kryteriow
         double[] cenaPreferencesVector1 = cenaPreferences1.getPreferencesVector(); // porownanie podkryteriow ceny
@@ -124,17 +125,40 @@ public class ChoicesController implements Initializable {
 
         double[] ratings = ahp.getRatings();
 
-        HashMap<String,Double> results = new HashMap<>();
-        results.put(selectedProviders.get(0), ratings[0]);
-        results.put(selectedProviders.get(1), ratings[1]);
-        results.put(selectedProviders.get(2), ratings[2]);
+        HashMap<Double,String> results = new HashMap<>();
+        results.put(ratings[0], MainWindowController.selectedProviders.get(0));
+        results.put(ratings[1], MainWindowController.selectedProviders.get(1));
+        results.put(ratings[2], MainWindowController.selectedProviders.get(2));
 
-        System.out.println("Ranking:");
+        System.out.println("Ranking dla poszczegolnych wariantow:");
         for(Double d: ratings)
             System.out.println(d);
 
-       // finalRanking.add(selectedProviders.get(bestChoice));
+        Arrays.sort(ratings);
+        System.out.println("Ranking po sortowaniu:");
+        for(Double d: ratings)
+            System.out.println(d);
 
+        finalRanking.add(results.get(ratings[2]));
+        finalRanking.add(results.get(ratings[1]));
+        finalRanking.add(results.get(ratings[0]));
+
+    }
+
+    private void normalizePreferencesMatrices() {
+        cenaPreferences1.normalize();
+        cenaPreferences2.normalize();
+        cenaPreferences3.normalize();
+        cenaPreferences4.normalize();
+        anonPreferences1.normalize();
+        anonPreferences2.normalize();
+        anonPreferences3.normalize();
+        anonPreferences4.normalize();
+        mozPreferences1.normalize();
+        mozPreferences2.normalize();
+        mozPreferences3.normalize();
+        szyfPreferences1.normalize();
+        dostPreferences1.normalize();
     }
 
     private boolean checkIfConsistent() {
@@ -268,7 +292,7 @@ public class ChoicesController implements Initializable {
         Matrix matrix = new Matrix(values);
         matrix.normalize();
 
-        if( matrix.isConsistent()){
+        if(matrix.isConsistent()){
             consistency.setText("TAK");
             consistency.setTextFill(Paint.valueOf("#029940"));
         }
@@ -280,80 +304,80 @@ public class ChoicesController implements Initializable {
 
     private void fillProviders() {
 
-        cena_provider1_3.setText(selectedProviders.get(0));
-        cena_provider1_4.setText(selectedProviders.get(0));
-        cena_provider1_5.setText(selectedProviders.get(0));
-        cena_provider1_6.setText(selectedProviders.get(0));
-        cena_provider1_7.setText(selectedProviders.get(0));
-        cena_provider1_8.setText(selectedProviders.get(0));
+        cena_provider1_3.setText(MainWindowController.selectedProviders.get(0));
+        cena_provider1_4.setText(MainWindowController.selectedProviders.get(0));
+        cena_provider1_5.setText(MainWindowController.selectedProviders.get(0));
+        cena_provider1_6.setText(MainWindowController.selectedProviders.get(0));
+        cena_provider1_7.setText(MainWindowController.selectedProviders.get(0));
+        cena_provider1_8.setText(MainWindowController.selectedProviders.get(0));
 
-        anon_provider1_3.setText(selectedProviders.get(0));
-        anon_provider1_4.setText(selectedProviders.get(0));
-        anon_provider1_5.setText(selectedProviders.get(0));
-        anon_provider1_6.setText(selectedProviders.get(0));
-        anon_provider1_7.setText(selectedProviders.get(0));
-        anon_provider1_8.setText(selectedProviders.get(0));
+        anon_provider1_3.setText(MainWindowController.selectedProviders.get(0));
+        anon_provider1_4.setText(MainWindowController.selectedProviders.get(0));
+        anon_provider1_5.setText(MainWindowController.selectedProviders.get(0));
+        anon_provider1_6.setText(MainWindowController.selectedProviders.get(0));
+        anon_provider1_7.setText(MainWindowController.selectedProviders.get(0));
+        anon_provider1_8.setText(MainWindowController.selectedProviders.get(0));
 
-        moz_provider1_3.setText(selectedProviders.get(0));
-        moz_provider1_4.setText(selectedProviders.get(0));
-        moz_provider1_5.setText(selectedProviders.get(0));
-        moz_provider1_6.setText(selectedProviders.get(0));
+        moz_provider1_3.setText(MainWindowController.selectedProviders.get(0));
+        moz_provider1_4.setText(MainWindowController.selectedProviders.get(0));
+        moz_provider1_5.setText(MainWindowController.selectedProviders.get(0));
+        moz_provider1_6.setText(MainWindowController.selectedProviders.get(0));
 
-        szyf_provider1_1.setText(selectedProviders.get(0));
-        szyf_provider1_2.setText(selectedProviders.get(0));
+        szyf_provider1_1.setText(MainWindowController.selectedProviders.get(0));
+        szyf_provider1_2.setText(MainWindowController.selectedProviders.get(0));
 
-        dost_provider1_1.setText(selectedProviders.get(0));
-        dost_provider1_2.setText(selectedProviders.get(0));
+        dost_provider1_1.setText(MainWindowController.selectedProviders.get(0));
+        dost_provider1_2.setText(MainWindowController.selectedProviders.get(0));
 
-        cena_provider2_3.setText(selectedProviders.get(1));
-        cena_provider2_4.setText(selectedProviders.get(1));
-        cena_provider2_5.setText(selectedProviders.get(1));
-        cena_provider2_6.setText(selectedProviders.get(1));
-        cena_provider2_7.setText(selectedProviders.get(1));
-        cena_provider2_8.setText(selectedProviders.get(1));
+        cena_provider2_3.setText(MainWindowController.selectedProviders.get(1));
+        cena_provider2_4.setText(MainWindowController.selectedProviders.get(1));
+        cena_provider2_5.setText(MainWindowController.selectedProviders.get(1));
+        cena_provider2_6.setText(MainWindowController.selectedProviders.get(1));
+        cena_provider2_7.setText(MainWindowController.selectedProviders.get(1));
+        cena_provider2_8.setText(MainWindowController.selectedProviders.get(1));
 
-        anon_provider2_3.setText(selectedProviders.get(1));
-        anon_provider2_4.setText(selectedProviders.get(1));
-        anon_provider2_5.setText(selectedProviders.get(1));
-        anon_provider2_6.setText(selectedProviders.get(1));
-        anon_provider2_7.setText(selectedProviders.get(1));
-        anon_provider2_8.setText(selectedProviders.get(1));
+        anon_provider2_3.setText(MainWindowController.selectedProviders.get(1));
+        anon_provider2_4.setText(MainWindowController.selectedProviders.get(1));
+        anon_provider2_5.setText(MainWindowController.selectedProviders.get(1));
+        anon_provider2_6.setText(MainWindowController.selectedProviders.get(1));
+        anon_provider2_7.setText(MainWindowController.selectedProviders.get(1));
+        anon_provider2_8.setText(MainWindowController.selectedProviders.get(1));
 
-        moz_provider2_3.setText(selectedProviders.get(1));
-        moz_provider2_4.setText(selectedProviders.get(1));
-        moz_provider2_5.setText(selectedProviders.get(1));
-        moz_provider2_6.setText(selectedProviders.get(1));
+        moz_provider2_3.setText(MainWindowController.selectedProviders.get(1));
+        moz_provider2_4.setText(MainWindowController.selectedProviders.get(1));
+        moz_provider2_5.setText(MainWindowController.selectedProviders.get(1));
+        moz_provider2_6.setText(MainWindowController.selectedProviders.get(1));
 
-        szyf_provider2_1.setText(selectedProviders.get(1));
-        szyf_provider2_2.setText(selectedProviders.get(1));
+        szyf_provider2_1.setText(MainWindowController.selectedProviders.get(1));
+        szyf_provider2_2.setText(MainWindowController.selectedProviders.get(1));
 
-        dost_provider2_1.setText(selectedProviders.get(1));
-        dost_provider2_2.setText(selectedProviders.get(1));
+        dost_provider2_1.setText(MainWindowController.selectedProviders.get(1));
+        dost_provider2_2.setText(MainWindowController.selectedProviders.get(1));
 
-        cena_provider3_3.setText(selectedProviders.get(2));
-        cena_provider3_4.setText(selectedProviders.get(2));
-        cena_provider3_5.setText(selectedProviders.get(2));
-        cena_provider3_6.setText(selectedProviders.get(2));
-        cena_provider3_7.setText(selectedProviders.get(2));
-        cena_provider3_8.setText(selectedProviders.get(2));
+        cena_provider3_3.setText(MainWindowController.selectedProviders.get(2));
+        cena_provider3_4.setText(MainWindowController.selectedProviders.get(2));
+        cena_provider3_5.setText(MainWindowController.selectedProviders.get(2));
+        cena_provider3_6.setText(MainWindowController.selectedProviders.get(2));
+        cena_provider3_7.setText(MainWindowController.selectedProviders.get(2));
+        cena_provider3_8.setText(MainWindowController.selectedProviders.get(2));
 
-        anon_provider3_3.setText(selectedProviders.get(2));
-        anon_provider3_4.setText(selectedProviders.get(2));
-        anon_provider3_5.setText(selectedProviders.get(2));
-        anon_provider3_6.setText(selectedProviders.get(2));
-        anon_provider3_7.setText(selectedProviders.get(2));
-        anon_provider3_8.setText(selectedProviders.get(2));
+        anon_provider3_3.setText(MainWindowController.selectedProviders.get(2));
+        anon_provider3_4.setText(MainWindowController.selectedProviders.get(2));
+        anon_provider3_5.setText(MainWindowController.selectedProviders.get(2));
+        anon_provider3_6.setText(MainWindowController.selectedProviders.get(2));
+        anon_provider3_7.setText(MainWindowController.selectedProviders.get(2));
+        anon_provider3_8.setText(MainWindowController.selectedProviders.get(2));
 
-        moz_provider3_3.setText(selectedProviders.get(2));
-        moz_provider3_4.setText(selectedProviders.get(2));
-        moz_provider3_5.setText(selectedProviders.get(2));
-        moz_provider3_6.setText(selectedProviders.get(2));
+        moz_provider3_3.setText(MainWindowController.selectedProviders.get(2));
+        moz_provider3_4.setText(MainWindowController.selectedProviders.get(2));
+        moz_provider3_5.setText(MainWindowController.selectedProviders.get(2));
+        moz_provider3_6.setText(MainWindowController.selectedProviders.get(2));
 
-        szyf_provider3_1.setText(selectedProviders.get(2));
-        szyf_provider3_2.setText(selectedProviders.get(2));
+        szyf_provider3_1.setText(MainWindowController.selectedProviders.get(2));
+        szyf_provider3_2.setText(MainWindowController.selectedProviders.get(2));
 
-        dost_provider3_1.setText(selectedProviders.get(2));
-        dost_provider3_2.setText(selectedProviders.get(2));
+        dost_provider3_1.setText(MainWindowController.selectedProviders.get(2));
+        dost_provider3_2.setText(MainWindowController.selectedProviders.get(2));
 
     }
 
@@ -369,7 +393,7 @@ public class ChoicesController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        fillProviders();
     }
 
     @FXML
