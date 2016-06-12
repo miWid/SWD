@@ -10,6 +10,7 @@ import javafx.scene.control.*;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
+import javax.xml.transform.Result;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
@@ -125,10 +126,15 @@ public class ChoicesController implements Initializable {
 
         double[] ratings = ahp.getRatings();
 
-        HashMap<Double,String> results = new HashMap<>();
-        results.put(ratings[0], MainWindowController.selectedProviders.get(0));
-        results.put(ratings[1], MainWindowController.selectedProviders.get(1));
-        results.put(ratings[2], MainWindowController.selectedProviders.get(2));
+        ResultHelper result1 = new ResultHelper(MainWindowController.selectedProviders.get(0), ratings[0]);
+        ResultHelper result2 = new ResultHelper(MainWindowController.selectedProviders.get(1), ratings[1]);
+        ResultHelper result3 = new ResultHelper(MainWindowController.selectedProviders.get(2), ratings[2]);
+
+        ArrayList<ResultHelper> results = new ArrayList<>();
+        results.add(result1);
+        results.add(result2);
+        results.add(result3);
+        Collections.sort(results);
 
         System.out.println("Ranking dla poszczegolnych wariantow:");
         for(Double d: ratings)
@@ -139,9 +145,9 @@ public class ChoicesController implements Initializable {
         for(Double d: ratings)
             System.out.println(d);
 
-        finalRanking.add(results.get(ratings[2]));
-        finalRanking.add(results.get(ratings[1]));
-        finalRanking.add(results.get(ratings[0]));
+        finalRanking.add(results.get(2).getProvider());
+        finalRanking.add(results.get(1).getProvider());
+        finalRanking.add(results.get(0).getProvider());
 
     }
 
@@ -393,7 +399,6 @@ public class ChoicesController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        fillProviders();
     }
 
     @FXML
