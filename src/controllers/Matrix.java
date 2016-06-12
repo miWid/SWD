@@ -67,7 +67,14 @@ public class Matrix {
         processedValues = 0;
         for(int columnIndex = 0; columnIndex < data.length - 1; columnIndex++) {
             for(int rowIndex = columnIndex + 1; rowIndex < data.length; rowIndex++) {
-                data[rowIndex][columnIndex] = 1 / values[processedValues++];
+                if(values[processedValues] == 0)
+                {
+                    data[rowIndex][columnIndex] = 1;
+                    processedValues++;
+                }
+                else {
+                    data[rowIndex][columnIndex] = values[processedValues] > 0 ? 1 / values[processedValues++] : values[processedValues++];
+                }
             }
         }
 
