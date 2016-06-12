@@ -23,6 +23,7 @@ public class AHProcesseror {
         public void createEndPreferences(double[] preferences) {
             children = new Node[preferences.length];
             for(int i = 0; i < preferences.length; i++) {
+                children[i] = new Node();
                 children[i].setValue(preferences[i] * this.value);
             }
         }
@@ -30,6 +31,7 @@ public class AHProcesseror {
         public void addSubcriteriaPreferences(double[] preferences) {
             children = new CriteriaNode[preferences.length];
             for(int i = 0; i < preferences.length; i++) {
+                children[i] = new CriteriaNode();
                 children[i].setValue(preferences[i] * this.value);
             }
         }
@@ -44,8 +46,13 @@ public class AHProcesseror {
 
         public double getFinalChildValue(int index) {
             double rating = 0;
-            for(Node child : children) {
-                rating += child.getClass().equals(this.getClass()) ? ((CriteriaNode)child).getFinalChildValue(index) : children[index].value;
+            if(children[0].getClass().equals(this.getClass())) {
+                for(Node child : children) {
+                    rating += ((CriteriaNode) child).getFinalChildValue(index);
+                }
+            }
+            else {
+                return children[index].value;
             }
             return rating;
         }
@@ -54,6 +61,7 @@ public class AHProcesseror {
     public void addCriteriaPreferences(double[] criteriaPreferences) {
         criteria = new CriteriaNode[criteriaPreferences.length];
         for(int i = 0; i < criteria.length; i++) {
+            criteria[i] = new CriteriaNode();
             criteria[i].setValue(criteriaPreferences[i]);
         }
     }
