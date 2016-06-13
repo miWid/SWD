@@ -57,7 +57,7 @@ public class RankingController implements Initializable {
     @FXML
     private void goToStart(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("../views/main2.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/views/main2.fxml"));
         stage.setScene(new Scene(root, 800, 600));
         stage.show();
     }

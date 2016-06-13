@@ -72,7 +72,7 @@ public class CriteriaController implements Initializable {
 //            }
 
             Stage stage = (Stage) dalej0.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/warianty.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/warianty.fxml"));
             Scene scene = new Scene(loader.load());
             ChoicesController controller = loader.<ChoicesController>getController();
             if(controller.currScene != null)

@@ -68,7 +68,7 @@ public class ChoicesController implements Initializable {
             countFinalRanking();
 
             Stage stage = (Stage) dalej1.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/ranking.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/ranking.fxml"));
             Scene scene = new Scene(loader.load());
             RankingController controller = loader.<RankingController>getController();
        //     controller.initData(finalRanking);
