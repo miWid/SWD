@@ -10,9 +10,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
@@ -26,17 +29,13 @@ public class MainWindowController implements Initializable{
     private ComboBox provider1, provider2, provider3;
     @FXML
     private Button mainNaviButton;
+    @FXML
+    private ImageView logoImage;
 
     private final ObservableList<String> allProviders =
             FXCollections.observableArrayList(DataLoader.loadNames());
 
-    private List<String> selectedProviders = new ArrayList();
-
-
-    @FXML
-    private void fillProviders(Event event) {
-        ((ComboBox)event.getSource()).getItems().setAll(allProviders);
-    }
+    public static List<String> selectedProviders = new ArrayList();
 
 
     @FXML
@@ -44,17 +43,19 @@ public class MainWindowController implements Initializable{
 
         if(checkProviders()){
 
-            if(selectedProviders.isEmpty())
-                selectedProviders.addAll(Arrays.asList(provider1.getValue().toString(), provider2.getValue().toString(), provider3.getValue().toString()));
+            selectedProviders.clear();
+            selectedProviders.addAll(Arrays.asList(provider1.getValue().toString(), provider2.getValue().toString(), provider3.getValue().toString()));
 
             Stage stage = (Stage) mainNaviButton.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/kryteria.fxml"));
             Scene scene = new Scene(loader.load());
             CriteriaController controller = loader.<CriteriaController>getController();
-            if(controller.currScene != null)
+
+            if(controller.currScene != null) {
                 stage.setScene(controller.currScene);
+            }
             else {
-                controller.initData(selectedProviders);
+                controller.initData();
                 controller.setPreviousScene(mainNaviButton.getScene());
                 stage.setScene(scene);
             }
@@ -82,7 +83,12 @@ public class MainWindowController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        File file = new File("images/vpn.png");
+        Image image = new Image(file.toURI().toString());
+        logoImage.setImage(image);
+        provider1.getItems().setAll(allProviders);
+        provider2.getItems().setAll(allProviders);
+        provider3.getItems().setAll(allProviders);
     }
 
 }

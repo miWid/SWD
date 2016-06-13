@@ -67,9 +67,9 @@
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
-                                          <ComboBox fx:id="provider3" editable="false" onShown="#fillProviders" prefHeight="30.0" prefWidth="310.0" promptText="Wybierz dostawcę..." GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                                          <ComboBox fx:id="provider2" editable="false" onShown="#fillProviders" prefHeight="30.0" prefWidth="310.0" promptText="Wybierz dostawcę..." GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                          <ComboBox fx:id="provider1" editable="false" onShown="#fillProviders" prefHeight="30.0" prefWidth="310.0" promptText="Wybierz dostawcę..." GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                          <ComboBox fx:id="provider3" editable="false" prefHeight="30.0" prefWidth="310.0" promptText="Wybierz dostawcę..." GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                          <ComboBox fx:id="provider2" editable="false" prefHeight="30.0" prefWidth="310.0" promptText="Wybierz dostawcę..." GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                          <ComboBox fx:id="provider1" editable="false" prefHeight="30.0" prefWidth="310.0" promptText="Wybierz dostawcę..." GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                        </children>
                                     </GridPane>
                                  </children>
