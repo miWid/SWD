@@ -66,14 +66,12 @@ public class RankingController implements Initializable {
     private void goToStart(ActionEvent actionEvent) throws IOException {
         Stage currStage = (Stage) rankPanel.getScene().getWindow();
         Stage stage = new Stage();
-<<<<<<< HEAD
+
         Parent root = FXMLLoader.load(getClass().getResource("/views/main2.fxml"));
-=======
-        Parent root = FXMLLoader.load(getClass().getResource("../views/main2.fxml"));
+
         CriteriaController.currScene = null;
         ChoicesController.currScene = null;
         currStage.close();
->>>>>>> origin/master
         stage.setScene(new Scene(root, 800, 600));
         stage.show();
     }
