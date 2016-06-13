@@ -22,7 +22,6 @@ public class ChoicesController implements Initializable {
 
     private static Scene prevScene;
     public static Scene currScene;
-    private ArrayList<String> selectedProviders;
     private List<String> finalRanking = new ArrayList<>();
 
     private static double[] initValues = {0,0,0};
@@ -90,7 +89,8 @@ public class ChoicesController implements Initializable {
     }
 
     private void countFinalRanking() {
-        
+
+        finalRanking.clear();
         normalizePreferencesMatrices();
 
         double[] criteriaPreferencesVector = CriteriaController.preferencesMatrix.getPreferencesVector(); //ogolne porownanie kryteriow
@@ -135,15 +135,6 @@ public class ChoicesController implements Initializable {
         results.add(result2);
         results.add(result3);
         Collections.sort(results);
-
-        System.out.println("Ranking dla poszczegolnych wariantow:");
-        for(Double d: ratings)
-            System.out.println(d);
-
-        Arrays.sort(ratings);
-        System.out.println("Ranking po sortowaniu:");
-        for(Double d: ratings)
-            System.out.println(d);
 
         finalRanking.add(results.get(2).getProvider());
         finalRanking.add(results.get(1).getProvider());
@@ -309,7 +300,6 @@ public class ChoicesController implements Initializable {
     }
 
     private void fillProviders() {
-
         cena_provider1_3.setText(MainWindowController.selectedProviders.get(0));
         cena_provider1_4.setText(MainWindowController.selectedProviders.get(0));
         cena_provider1_5.setText(MainWindowController.selectedProviders.get(0));

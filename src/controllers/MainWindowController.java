@@ -46,11 +46,6 @@ public class MainWindowController implements Initializable{
             selectedProviders.clear();
             selectedProviders.addAll(Arrays.asList(provider1.getValue().toString(), provider2.getValue().toString(), provider3.getValue().toString()));
 
-            System.out.println("MainWindowController");
-            for(String p : selectedProviders){
-                System.out.println(p);
-            }
-
             Stage stage = (Stage) mainNaviButton.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/kryteria.fxml"));
             Scene scene = new Scene(loader.load());
